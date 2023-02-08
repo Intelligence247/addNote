@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border text-[white]
+}
+
+.body {
+  @apply w-screen h-screen grid place-items-center
+}
+
+main {
+  @apply bg-[green] w-[40rem] h-[30rem] rounded-lg
+}
