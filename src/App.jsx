@@ -3,16 +3,36 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  const listArr = ['Books']
 
+  const [list, setList] = useState('')
+  const [arrlist,setArrList]=useState(listArr)
+  // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+   setArrList(listArr.concat(list))
+    setList('')
+  }
+  console.log(listArr)
   return (
     <div className="body">
       <main>
         <h1 className='text-[3rem] w-max m-auto'>Add Note</h1>
-        <input type="text" className='outline-[red] block text-black m-auto w-max' />
-        <button className='bg-[blue] py-[0rem] px-[1rem] text-[2rem] w-max m-auto block mr-[5rem] rounded-full'>Add</button>
+        <form onSubmit={handleSubmit}>
+        
+          <input 
+          type="text"
+          // value={list}
+           onChange={(l)=>setList(l.target.value)} />
 
+
+          <button type='submit' className='bg-[blue]'>Add</button>
+          <ul className='block w-max m-auto'>
+           { arrlist.map((a,index)=>(
+           <li key={`${index}-${a[index]}`}>{a}</li> 
+           ))}
+          </ul>
+        </form>
       </main>
     </div>
   )
