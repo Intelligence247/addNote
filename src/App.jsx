@@ -10,7 +10,7 @@ function App() {
   // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   const handleSubmit=(e)=>{
     e.preventDefault();
-   setArrList(listArr.concat(list))
+   setArrList(arrlist.concat(list))
     setList('')
   }
   console.log(listArr)
@@ -18,15 +18,15 @@ function App() {
     <div className="body">
       <main>
         <h1 className='text-[3rem] w-max m-auto'>Add Note</h1>
-        <form onSubmit={handleSubmit}>
-        
+        <form onSubmit={handleSubmit}>        
           <input 
           type="text"
-          // value={list}
+          value={list}
            onChange={(l)=>setList(l.target.value)} />
 
 
-          <button type='submit' className='bg-[blue]'>Add</button>
+          <button type='submit' className='' onClick={()=>{
+          }}>Add</button>
           <ul className='block w-max m-auto'>
            { arrlist.map((a,index)=>(
            <li key={`${index}-${a[index]}`}>{a}</li> 

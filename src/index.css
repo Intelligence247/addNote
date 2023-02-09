@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 * {
-  @apply m-0 p-0 box-border text-[white]
+  @apply m-0 p-0 box-border text-[#810D0D]
 }
 
 .body {
-  @apply w-screen h-screen grid place-items-center
+  @apply w-screen h-screen grid place-items-center bg-black
 }
 
 main {
-  @apply bg-[green] w-[40rem] h-[30rem] rounded-lg
+  @apply bg-[#D9D9D9] w-[40rem] min-h-[30rem] rounded-lg
 }
 
 ul>li {
-  @apply list-disc
+  @apply list-decimal text-[1.5rem] text-black
 }
 input{
-  @apply outline-[red] block text-black m-auto w-max
+  @apply outline-[#810D0D] block text-black m-auto w-[20rem] h-[2rem] border-[black] border-[.1rem] pl-4
 }
 button{
-  @apply bg-[red] py-[0rem] px-[1rem] text-[2rem] w-max m-auto block mr-[5rem] rounded-full
+  @apply bg-[red] py-[0rem] px-[1rem] text-[1.2rem] w-max m-auto block mr-[5rem] rounded-[50%] border-[black] border-[.1rem] mt-[2rem]
 }
