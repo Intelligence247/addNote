@@ -1,6 +1,6 @@
 # AddNote
 
-_An implementation of AddNote clone with html, Tailwind and React_
+_An implementation of AddNote clone with Tailwind and React_
 
 ## Prequisite
 
@@ -12,7 +12,6 @@ _An implementation of AddNote clone with html, Tailwind and React_
 
 ## Tech/framework used
 
-- Html
 - React
 - TailwindCss
 
